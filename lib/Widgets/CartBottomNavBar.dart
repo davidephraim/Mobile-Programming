@@ -21,7 +21,7 @@ class CartBottomNavBar extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF31B6B2)),
                 padding: MaterialStateProperty.all(
                   EdgeInsets.symmetric(
                     vertical: 15,

@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
           child: Icon(
             CupertinoIcons.cart,
             size: 28,
-            color: Colors.red,
+            color: Color(0xFF31B6B2),
           ),
           backgroundColor: Colors.white,
         ),

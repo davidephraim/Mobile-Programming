@@ -90,7 +90,7 @@ class CartPage extends StatelessWidget {
                             child: Container(
                               padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
-                                  color: Colors.red,
+                                  color: Color(0xFF31B6B2),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Column(
                                 mainAxisAlignment:
@@ -181,7 +181,7 @@ class CartPage extends StatelessWidget {
                             child: Container(
                               padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
-                                  color: Colors.red,
+                                  color: Color(0xFF31B6B2),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Column(
                                 mainAxisAlignment:
@@ -272,7 +272,7 @@ class CartPage extends StatelessWidget {
                             child: Container(
                               padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
-                                  color: Colors.red,
+                                  color: Color(0xFF31B6B2),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Column(
                                 mainAxisAlignment:
@@ -399,7 +399,7 @@ class CartPage extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.red),
+                                      color: Color(0xFF31B6B2)),
                                 ),
                               ],
                             ),
