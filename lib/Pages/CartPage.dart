@@ -7,6 +7,7 @@ import 'package:purify/Widgets/DrawerWidget.dart';
 class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    int count = 5, pay=count*10, delivery=20, total=pay+delivery;
     return Scaffold(
       body: ListView(
         children: [
@@ -96,7 +97,7 @@ class CartPage extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Icon(
-                                    CupertinoIcons.minus,
+                                    CupertinoIcons.plus,
                                     color: Colors.white,
                                   ),
                                   Text(
@@ -106,6 +107,10 @@ class CartPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
+                                  ),
+                                  Icon(
+                                    CupertinoIcons.minus,
+                                    color: Colors.white,
                                   ),
                                 ],
                               ),
@@ -183,7 +188,7 @@ class CartPage extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Icon(
-                                    CupertinoIcons.minus,
+                                    CupertinoIcons.plus,
                                     color: Colors.white,
                                   ),
                                   Text(
@@ -193,6 +198,10 @@ class CartPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
+                                  ),
+                                  Icon(
+                                    CupertinoIcons.minus,
+                                    color: Colors.white,
                                   ),
                                 ],
                               ),
@@ -270,7 +279,7 @@ class CartPage extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Icon(
-                                    CupertinoIcons.minus,
+                                    CupertinoIcons.plus,
                                     color: Colors.white,
                                   ),
                                   Text(
@@ -279,7 +288,12 @@ class CartPage extends StatelessWidget {
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
+                                      
                                     ),
+                                  ),
+                                  Icon(
+                                    CupertinoIcons.minus,
+                                    color: Colors.white,
                                   ),
                                 ],
                               ),
@@ -318,7 +332,7 @@ class CartPage extends StatelessWidget {
                                   style: TextStyle(fontSize: 20),
                                 ),
                                 Text(
-                                  "10",
+                                  count.toString(),
                                   style: TextStyle(fontSize: 20),
                                 ),
                               ],
@@ -339,7 +353,7 @@ class CartPage extends StatelessWidget {
                                   style: TextStyle(fontSize: 20),
                                 ),
                                 Text(
-                                  "\$60",
+                                  pay.toString(),
                                   style: TextStyle(fontSize: 20),
                                 ),
                               ],
@@ -360,7 +374,7 @@ class CartPage extends StatelessWidget {
                                   style: TextStyle(fontSize: 20),
                                 ),
                                 Text(
-                                  "\$20",
+                                  delivery.toString(),
                                   style: TextStyle(fontSize: 20),
                                 ),
                               ],
@@ -381,7 +395,7 @@ class CartPage extends StatelessWidget {
                                   style: TextStyle(fontSize: 20),
                                 ),
                                 Text(
-                                  "\$80",
+                                  total.toString(),
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,

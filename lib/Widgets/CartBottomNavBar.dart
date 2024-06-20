@@ -12,23 +12,9 @@ class CartBottomNavBar extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
-                  "Total:",
-                  style: TextStyle(
-                    fontSize: 19,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                
                 SizedBox(
                   width: 15,
-                ),
-                Text(
-                  "\$80",
-                  style: TextStyle(
-                    fontSize: 19,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red,
-                  ),
                 ),
               ],
             ),
