@@ -34,7 +34,7 @@ class PopularItemsWidget extends StatelessWidget {
                       Container(
                         alignment: Alignment.center,
                         child: Image.asset(
-                          "images/burger.png",
+                          "assets/icons/burger.png",
                           height: 130,
                         ),
                       ),
@@ -103,7 +103,7 @@ class PopularItemsWidget extends StatelessWidget {
                       Container(
                         alignment: Alignment.center,
                         child: Image.asset(
-                          "images/salan.png",
+                          "assets/icons/salan.png",
                           height: 130,
                         ), //Image.asset
                       ), //Container
@@ -120,8 +120,8 @@ class PopularItemsWidget extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 15,
                           //fontWeight: FontWeight.bold,
-                        ), //TextStyle
-                      ), //Text
+                        ),
+                      ),
                       SizedBox(height: 12),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,20 +132,20 @@ class PopularItemsWidget extends StatelessWidget {
                               fontSize: 17,
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
-                            ), //TextStyle
-                          ), //Text
+                            ),
+                          ),
                           Icon(
                             Icons.favorite_border,
                             color: Colors.red,
                             size: 26,
-                          ), //Icon
+                          ),
                         ],
-                      ), //Row
+                      ),
                     ],
-                  ), //Column
-                ), //Padding
-              ), //Container
-            ), //Padding
+                  ),
+                ),
+              ),
+            ),
 
             //Single Item
             Padding(
@@ -171,9 +171,8 @@ class PopularItemsWidget extends StatelessWidget {
                     children: [
                       Container(
                         alignment: Alignment.center,
-                        padding: EdgeInsets.all(5),
                         child: Image.asset(
-                          "images/drink.png",
+                          "assets/icons/drink.png",
                           height: 130,
                         ),
                       ),
@@ -241,7 +240,7 @@ class PopularItemsWidget extends StatelessWidget {
                       Container(
                         alignment: Alignment.center,
                         child: Image.asset(
-                          "images/pizza.png",
+                          "assets/icons/pizza.png",
                           height: 130,
                         ), //Image.asset
                       ), //Container
@@ -310,7 +309,7 @@ class PopularItemsWidget extends StatelessWidget {
                       Container(
                         alignment: Alignment.center,
                         child: Image.asset(
-                          "images/biryani.png",
+                          "assets/icons/biryani.png",
                           height: 130,
                         ),
                       ),
