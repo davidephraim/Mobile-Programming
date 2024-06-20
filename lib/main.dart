@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'RE:PLATE',
       debugShowCheckedModeBanner: false,
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xfff5f5f3),
       ),
       routes: {
-        "/" : (context)=>HomePage(),
+        "/": (context) => HomePage(),
       },
     );
   }

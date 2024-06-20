@@ -25,7 +25,8 @@ class CategoriesWidget extends StatelessWidget {
                         offset: Offset(0, 3),
                       )
                     ]),
-                child: Image.asset('Images/drink.png',
+                child: Image.asset(
+                  'Images/drink.png',
                   width: 50,
                   height: 50,
                 ),
@@ -46,7 +47,8 @@ class CategoriesWidget extends StatelessWidget {
                         offset: Offset(0, 3),
                       )
                     ]),
-                child: Image.asset('Images/salan.png',
+                child: Image.asset(
+                  'Images/salan.png',
                   width: 50,
                   height: 50,
                 ),
@@ -67,7 +69,8 @@ class CategoriesWidget extends StatelessWidget {
                         offset: Offset(0, 3),
                       )
                     ]),
-                child: Image.asset('Images/biryani.png',
+                child: Image.asset(
+                  'Images/biryani.png',
                   width: 50,
                   height: 50,
                 ),
@@ -88,7 +91,8 @@ class CategoriesWidget extends StatelessWidget {
                         offset: Offset(0, 3),
                       )
                     ]),
-                child: Image.asset('Images/pizza.png',
+                child: Image.asset(
+                  'Images/pizza.png',
                   width: 50,
                   height: 50,
                 ),
@@ -109,7 +113,8 @@ class CategoriesWidget extends StatelessWidget {
                         offset: Offset(0, 3),
                       )
                     ]),
-                child: Image.asset('Images/burger.png',
+                child: Image.asset(
+                  'Images/burger.png',
                   width: 50,
                   height: 50,
                 ),
