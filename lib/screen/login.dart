@@ -166,7 +166,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           Spacer(),
-          Image.asset('assets/images/shape64.png'),
+          Image.asset('assets/images/shape4.png'),
         ],
       ),
     );
