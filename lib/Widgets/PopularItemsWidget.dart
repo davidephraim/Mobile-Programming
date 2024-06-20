@@ -210,7 +210,7 @@ class PopularItemsWidget extends StatelessWidget {
                             size: 26,
                           ), //Icon
                         ],
-                      ), 
+                      ),
                     ],
                   ),
                 ),

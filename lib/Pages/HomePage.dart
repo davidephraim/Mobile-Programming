@@ -77,8 +77,6 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          // PopularItemsWidget(),
-
           Padding(
             padding: EdgeInsets.only(top: 20, left: 10),
             child: Text(
@@ -89,8 +87,6 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-
-          // NewestItemsWidget(),
         ],
       ),
       drawer: DrawerWidget(),
@@ -105,7 +101,7 @@ class HomePage extends StatelessWidget {
           ),
         ]),
         child: FloatingActionButton(
-          onPressed: (){},
+          onPressed: () {},
           child: Icon(
             CupertinoIcons.cart,
             size: 28,
