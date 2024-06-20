@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:purify/constants.dart';
 import 'package:purify/models/best_sellers_products.dart';
@@ -16,12 +15,14 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   late TabController _tabController;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _tabController = TabController(length: 4, vsync: this);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,12 +158,13 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   height: 250,
                   width: double.infinity,
                   child: ListView.builder(
-                      itemCount: demoProductsForYou.length,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: demoBestSellesProducts.length,
                       itemBuilder: (context, index) {
-                        return CardBestSellers(context, demoProductsForYou[index]);
+                        return CardBestSellers(context, demoBestSellesProducts[index]);
                       }),
                 ),
-                SizedBox(height: defaultPadding*2,),
+                SizedBox(height: defaultPadding * 2,),
                 Text(
                   'For you',
                   style: GoogleFonts.ubuntu(
@@ -177,9 +179,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   height: 250,
                   width: double.infinity,
                   child: ListView.builder(
-                      itemCount: demoBestSellesProducts.length,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: demoProductsForYou.length,
                       itemBuilder: (context, index) {
-                        return CardForYou(context, demoBestSellesProducts[index]);
+                        return CardForYou(context, demoProductsForYou[index]);
                       }),
                 ),
                 SizedBox(
@@ -219,7 +222,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
 
   Container CardForYou(BuildContext context, ProductsForYou productsForYou) {
     return Container(
-      width: MediaQuery.of(context).size.width - defaultPadding * 4,
+      width: MediaQuery.of(context).size.width / 1.5,
       margin: EdgeInsets.only(right: defaultPadding),
       child: Stack(
         children: [
@@ -234,38 +237,38 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: defaultPadding*2),
+            padding: const EdgeInsets.only(left: defaultPadding * 2),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Spacer(),
                 Text(
-                    productsForYou.category,
-                    style: GoogleFonts.ubuntu(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400),
-                  ),
+                  productsForYou.category,
+                  style: GoogleFonts.ubuntu(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400),
+                ),
                 Text(
-                    productsForYou.title,
-                    style: GoogleFonts.ubuntu(
-                        color: Colors.white,
-                        fontSize: 26,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(height: defaultPadding,)
+                  productsForYou.title,
+                  style: GoogleFonts.ubuntu(
+                      color: Colors.white,
+                      fontSize: 26,
+                      fontWeight: FontWeight.w600),
+                ),
+                SizedBox(height: defaultPadding,)
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: defaultPadding*3, right: defaultPadding*1.5),
+            padding: const EdgeInsets.only(top: defaultPadding * 3, right: defaultPadding * 1.5),
             child: Align(
               alignment: Alignment.topRight,
               child: Icon(Icons.favorite_outline, size: 40,),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: defaultPadding*1.5, right: defaultPadding*1.5),
+            padding: const EdgeInsets.only(bottom: defaultPadding * 1.5, right: defaultPadding * 1.5),
             child: Align(
               alignment: Alignment.bottomRight,
               child: Text(
@@ -295,12 +298,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       ),
     );
   }
+
+
   Container CardBestSellers(BuildContext context, BestSellesProducts bestSellesProducts) {
     return Container(
-      width: MediaQuery.of(context).size.width - defaultPadding * 4,
+      width: MediaQuery.of(context) .size.width - defaultPadding * 4,
       margin: EdgeInsets.only(right: defaultPadding),
       child: Stack(
-        children: [
+        children: [ 
           Align(
             alignment: Alignment.bottomCenter,
             child: Image.asset('assets/images/shape2.png')),
@@ -312,38 +317,38 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: defaultPadding*2),
+            padding: const EdgeInsets.only(left: defaultPadding * 2),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Spacer(),
                 Text(
-                    bestSellesProducts.category,
-                    style: GoogleFonts.ubuntu(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400),
-                  ),
+                  bestSellesProducts.category,
+                  style: GoogleFonts.ubuntu(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400),
+                ),
                 Text(
-                    bestSellesProducts.title,
-                    style: GoogleFonts.ubuntu(
-                        color: Colors.white,
-                        fontSize: 26,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(height: defaultPadding,)
+                  bestSellesProducts.title,
+                  style: GoogleFonts.ubuntu(
+                      color: Colors.white,
+                      fontSize: 26,
+                      fontWeight: FontWeight.w600),
+                ),
+                SizedBox(height: defaultPadding,)
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: defaultPadding*3, right: defaultPadding*1.5),
+            padding: const EdgeInsets.only(top: defaultPadding * 3, right: defaultPadding * 1.5),
             child: Align(
               alignment: Alignment.topRight,
               child: Icon(Icons.favorite_outline, size: 40,),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: defaultPadding*1.5, right: defaultPadding*1.5),
+            padding: const EdgeInsets.only(bottom: defaultPadding * 1.5, right: defaultPadding * 1.5),
             child: Align(
               alignment: Alignment.bottomRight,
               child: Text(
