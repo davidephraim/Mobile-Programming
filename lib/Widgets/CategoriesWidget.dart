@@ -26,7 +26,7 @@ class CategoriesWidget extends StatelessWidget {
                       )
                     ]),
                 child: Image.asset(
-                  'Images/drink.png',
+                  'assets/icons/drink.png',
                   width: 50,
                   height: 50,
                 ),
@@ -48,7 +48,7 @@ class CategoriesWidget extends StatelessWidget {
                       )
                     ]),
                 child: Image.asset(
-                  'Images/salan.png',
+                  'assets/icons/salan.png',
                   width: 50,
                   height: 50,
                 ),
@@ -70,7 +70,7 @@ class CategoriesWidget extends StatelessWidget {
                       )
                     ]),
                 child: Image.asset(
-                  'Images/biryani.png',
+                  'assets/icons/biryani.png',
                   width: 50,
                   height: 50,
                 ),
@@ -92,7 +92,7 @@ class CategoriesWidget extends StatelessWidget {
                       )
                     ]),
                 child: Image.asset(
-                  'Images/pizza.png',
+                  'assets/icons/pizza.png',
                   width: 50,
                   height: 50,
                 ),
@@ -114,7 +114,7 @@ class CategoriesWidget extends StatelessWidget {
                       )
                     ]),
                 child: Image.asset(
-                  'Images/burger.png',
+                  'assets/icons/burger.png',
                   width: 50,
                   height: 50,
                 ),
