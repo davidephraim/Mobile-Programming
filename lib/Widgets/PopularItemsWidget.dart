@@ -58,7 +58,7 @@ class PopularItemsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "\$10",
+                            "Rp. 20,000.00",
                             style: TextStyle(
                               fontSize: 17,
                               color: Colors.red,
@@ -127,7 +127,7 @@ class PopularItemsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "\$10",
+                            "Rp. 50,000.00",
                             style: TextStyle(
                               fontSize: 17,
                               color: Colors.red,
@@ -196,7 +196,7 @@ class PopularItemsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "\$10",
+                            "Rp. 10,000.00",
                             style: TextStyle(
                               fontSize: 17,
                               color: Colors.red,
@@ -264,7 +264,7 @@ class PopularItemsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "\$10",
+                            "Rp. 100,000.00",
                             style: TextStyle(
                               fontSize: 17,
                               color: Colors.red,
@@ -333,7 +333,7 @@ class PopularItemsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "\$10",
+                            "Rp. 50,000.00",
                             style: TextStyle(
                               fontSize: 17,
                               color: Colors.red,

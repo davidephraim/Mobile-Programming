@@ -24,7 +24,7 @@ class ItemBottomNavBar extends StatelessWidget {
                   width: 15,
                 ),
                 Text(
-                  "\$10",
+                  "Rp. 50,000.00",
                   style: TextStyle(
                     fontSize: 19,
                     fontWeight: FontWeight.bold,

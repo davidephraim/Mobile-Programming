@@ -74,7 +74,7 @@ class NewestItemWidget extends StatelessWidget {
                               }),
                             ),
                             const Text(
-                              "\$10",
+                              "Rp. 50,000.00",
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.red,
@@ -172,7 +172,7 @@ class NewestItemWidget extends StatelessWidget {
                               }),
                             ),
                             const Text(
-                              "\$10",
+                              "Rp. 100,000.00",
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.red,
@@ -270,7 +270,7 @@ class NewestItemWidget extends StatelessWidget {
                               }),
                             ),
                             const Text(
-                              "\$10",
+                              "Rp. 20,000.00",
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.red,
@@ -368,7 +368,7 @@ class NewestItemWidget extends StatelessWidget {
                               }),
                             ),
                             const Text(
-                              "\$10",
+                              "Rp. 50,000.00",
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.red,
@@ -466,7 +466,7 @@ class NewestItemWidget extends StatelessWidget {
                               }),
                             ),
                             const Text(
-                              "\$10",
+                              "Rp. 10,000.00",
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.red,
