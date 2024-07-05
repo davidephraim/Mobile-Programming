@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:purify/Widgets/AppBarWidget.dart';
-import 'package:purify/Widgets/ItemBottomNavBar.dart'; // Ensure this import is correct
+import 'package:purify/Widgets/ItemBottomNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
@@ -14,11 +14,21 @@ class ItemPage extends StatelessWidget {
         child: ListView(
           children: [
             AppBarWidget(),
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Image.asset(
-                "images/pizza.png",
-                height: 300,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  "/commentPage",
+                  arguments:
+                      "images/pizza.png",
+                );
+              },
+              child: Padding(
+                padding: EdgeInsets.all(16),
+                child: Image.asset(
+                  "images/pizza.png",
+                  height: 300,
+                ),
               ),
             ),
             Arc(

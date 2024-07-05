@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:purify/Pages/CommentPage.dart';
 import 'package:purify/Pages/HomePage.dart';
 import 'package:purify/Pages/ItemPage.dart';
 import 'package:purify/Pages/CartPage.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => HomePage(),
         "/cartPage":(context) => CartPage(),
         "/itemPage": (context) => ItemPage(),
+        "/commentPage": (context) => CommentPage(),
       },
     );
   }

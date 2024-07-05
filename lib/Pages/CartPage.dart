@@ -108,7 +108,7 @@ class _CartPageState extends State<CartPage> {
                       ),
                       child: Column(
                         children: [
-                          buildSummaryRow("Items:", totalCount.toString()),
+                          buildSummaryRow("Items:", totalCount.toString(), isCurrency: false),
                           Divider(color: Colors.black),
                           buildSummaryRow("Sub-Total:", totalPay.toString()),
                           Divider(color: Colors.black),
@@ -232,7 +232,7 @@ class _CartPageState extends State<CartPage> {
     );
   }
 
-  Widget buildSummaryRow(String label, String value, {bool isTotal = false}) {
+  Widget buildSummaryRow(String label, String value, {bool isTotal = false, bool isCurrency = true}) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10),
       child: Row(
@@ -243,7 +243,7 @@ class _CartPageState extends State<CartPage> {
             style: TextStyle(fontSize: 20, fontWeight: isTotal ? FontWeight.bold : FontWeight.normal, color: isTotal ? Color(0xFF31B6B2) : Colors.black),
           ),
           Text(
-            "Rp. " + value,
+            isCurrency ? "Rp. " + value : value,
             style: TextStyle(fontSize: 20, fontWeight: isTotal ? FontWeight.bold : FontWeight.normal, color: isTotal ? Color(0xFF31B6B2) : Colors.black),
           ),
         ],
