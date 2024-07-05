@@ -34,6 +34,9 @@ class DrawerWidget extends StatelessWidget {
                 'Home',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, "/");
+              },
             ),
             ListTile(
               leading: Icon(CupertinoIcons.person, color: Colors.red),
@@ -41,6 +44,9 @@ class DrawerWidget extends StatelessWidget {
                 'My Account',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, "/myAccount");
+              },
             ),
             ListTile(
               leading: Icon(CupertinoIcons.cart_fill, color: Colors.red),
@@ -48,6 +54,9 @@ class DrawerWidget extends StatelessWidget {
                 'My Orders',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, "/myOrders");
+              },
             ),
             ListTile(
               leading: Icon(CupertinoIcons.heart_fill, color: Colors.red),
@@ -55,6 +64,9 @@ class DrawerWidget extends StatelessWidget {
                 'My Wish List',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, "/myWishList");
+              },
             ),
             ListTile(
               leading: Icon(CupertinoIcons.settings, color: Colors.red),
@@ -62,6 +74,9 @@ class DrawerWidget extends StatelessWidget {
                 'Settings',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, "/settings");
+              },
             ),
             ListTile(
               leading: Icon(Icons.exit_to_app, color: Colors.red),
@@ -69,7 +84,10 @@ class DrawerWidget extends StatelessWidget {
                 'Log Out',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-            )
+              onTap: () {
+
+              },
+            ),
           ],
         ),
       ),

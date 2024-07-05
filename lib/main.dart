@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:purify/Pages/CommentPage.dart';
 import 'package:purify/Pages/HomePage.dart';
 import 'package:purify/Pages/CartPage.dart';
+import 'package:purify/Pages/MyAccountScreen.dart';
+import 'package:purify/Pages/MyOrdersScreen.dart';
+import 'package:purify/Pages/MyWishListScreen.dart';
+import 'package:purify/Pages/SettingsScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +21,11 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => HomePage(),
-        "/cartPage":(context) => CartPage(),
+        "/cartPage": (context) => CartPage(),
+        "/myAccount": (context) => MyAccountScreen(),
+        "/myOrders": (context) => MyOrdersScreen(),
+        "/myWishList": (context) => MyWishListScreen(),
+        "/settings": (context) => SettingsScreen(),
       },
     );
   }
