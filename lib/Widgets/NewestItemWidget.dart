@@ -9,492 +9,133 @@ class NewestItemWidget extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            // for (int i = 0; i < 10; i++)
-            //single Item
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
+            _buildSingleItem(
+              imagePath: "assets/icons/rendang.jpeg",
+              name: "Rendang",
+              description: "Taste Our Hot Rendang, We Provide Our Great Foods",
+              price: "Rp. 50,000.00",
+            ),
+            _buildSingleItem(
+              imagePath: "assets/icons/pizza.png",
+              name: "Hot Pizza",
+              description: "Taste Our Hot Pizza, We Provide Our Great Foods",
+              price: "Rp. 100,000.00",
+            ),
+            _buildSingleItem(
+              imagePath: "assets/icons/sate.jpeg",
+              name: "Sate",
+              description: "Taste Our Sate, We Provide Our Great Foods",
+              price: "Rp. 20,000.00",
+            ),
+            _buildSingleItem(
+              imagePath: "assets/icons/spagheti .png",
+              name: "Spagheti",
+              description: "Taste Our Spagheti, We Provide Our Great Foods",
+              price: "Rp. 50,000.00",
+            ),
+            _buildSingleItem(
+              imagePath: "assets/icons/es campur.png",
+              name: "Es Campur",
+              description: "Taste Our Es Campur, We Provide Our Great Foods",
+              price: "Rp. 10,000.00",
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSingleItem({
+    required String imagePath,
+    required String name,
+    required String description,
+    required String price,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Container(
+        width: 380,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 3,
+              blurRadius: 10,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            InkWell(
+              onTap: () {},
               child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 190,
-                        padding: const EdgeInsets.all(10),
-                        child: Image.asset(
-                          "assets/icons/rendang.jpeg",
-                          height: 120,
-                          width: 150,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const Text(
-                              "Rendang",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Taste Our Hot Rendang, We Provide Our Great Foods",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                            // Placeholder for rating bar. Replace with your actual rating bar widget.
-                            Row(
-                              children: List.generate(5, (index) {
-                                return Icon(
-                                  index < 4 ? Icons.star : Icons.star_border,
-                                  color: Colors.red,
-                                  size: 18,
-                                );
-                              }),
-                            ),
-                            const Text(
-                              "Rp. 50,000.00",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.red,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                  Icon(
-                                    CupertinoIcons.cart,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                alignment: Alignment.center,
+                width: 150,
+                padding: const EdgeInsets.all(10),
+                child: Image.asset(
+                  imagePath,
+                  height: 120,
+                  width: 150,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            //single Item
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 190,
-                        padding: const EdgeInsets.all(10),
-                        child: Image.asset(
-                          "assets/icons/pizza.png",
-                          height: 120,
-                          width: 150,
-                        ),
+                    Text(
+                      name,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const Text(
-                              "Hot Pizza",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Taste Our Hot Pizza, We Provide Our Great Foods",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                            // Placeholder for rating bar. Replace with your actual rating bar widget.
-                            Row(
-                              children: List.generate(5, (index) {
-                                return Icon(
-                                  index < 4 ? Icons.star : Icons.star_border,
-                                  color: Colors.red,
-                                  size: 18,
-                                );
-                              }),
-                            ),
-                            const Text(
-                              "Rp. 100,000.00",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.red,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                  Icon(
-                                    CupertinoIcons.cart,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                    Text(
+                      description,
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Row(
+                      children: List.generate(5, (index) {
+                        return Icon(
+                          index < 4 ? Icons.star : Icons.star_border,
+                          color: Colors.red,
+                          size: 18,
+                        );
+                      }),
+                    ),
+                    Text(
+                      price,
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            //single Item
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 190,
-                        padding: const EdgeInsets.all(10),
-                        child: Image.asset(
-                          "assets/icons/sate.jpeg",
-                          height: 120,
-                          width: 150,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                          size: 26,
                         ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const Text(
-                              "Sate",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Taste Our Sate, We Provide Our Great Foods",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                            // Placeholder for rating bar. Replace with your actual rating bar widget.
-                            Row(
-                              children: List.generate(5, (index) {
-                                return Icon(
-                                  index < 4 ? Icons.star : Icons.star_border,
-                                  color: Colors.red,
-                                  size: 18,
-                                );
-                              }),
-                            ),
-                            const Text(
-                              "Rp. 20,000.00",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.red,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                  Icon(
-                                    CupertinoIcons.cart,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                        Icon(
+                          CupertinoIcons.cart,
+                          color: Colors.red,
+                          size: 26,
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            //single Item
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 190,
-                        padding: const EdgeInsets.all(10),
-                        child: Image.asset(
-                          "assets/icons/spagheti .png",
-                          height: 120,
-                          width: 150,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const Text(
-                              "Spagheti",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Taste Our Spagheti, We Provide Our Great Foods",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                            // Placeholder for rating bar. Replace with your actual rating bar widget.
-                            Row(
-                              children: List.generate(5, (index) {
-                                return Icon(
-                                  index < 4 ? Icons.star : Icons.star_border,
-                                  color: Colors.red,
-                                  size: 18,
-                                );
-                              }),
-                            ),
-                            const Text(
-                              "Rp. 50,000.00",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.red,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                  Icon(
-                                    CupertinoIcons.cart,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            //single Item
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Container(
-                width: 380,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 190,
-                        padding: const EdgeInsets.all(10),
-                        child: Image.asset(
-                          "assets/icons/es campur.png",
-                          height: 120,
-                          width: 150,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const Text(
-                              "Es Campur",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Taste Our Es Campur, We Provide Our Great Foods",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                            // Placeholdy  uer for rating bar. Replace with your actual rating bar widget.
-                            Row(
-                              children: List.generate(5, (index) {
-                                return Icon(
-                                  index < 4 ? Icons.star : Icons.star_border,
-                                  color: Colors.red,
-                                  size: 18,
-                                );
-                              }),
-                            ),
-                            const Text(
-                              "Rp. 10,000.00",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.red,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                  Icon(
-                                    CupertinoIcons.cart,
-                                    color: Colors.red,
-                                    size: 26,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      ],
                     ),
                   ],
                 ),
